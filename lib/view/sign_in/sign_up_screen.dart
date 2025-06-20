@@ -12,9 +12,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 var emailController = TextEditingController();
 var fullNameController = TextEditingController();
-var phoneController = TextEditingController();
 var dbController = TextEditingController();
 var passController = TextEditingController();
+bool genderMale = true;
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -111,11 +111,22 @@ class SignUpScreen extends StatelessWidget {
                               DefaultTextFiled(
                                 labelText: "Birth of date",
                                 controller: dbController,
+                                readOnly: true,
+                                onTap: () {
+                                  showDatePicker(
+                                    context: context,
+                                    initialDate: DateTime.now(),
+                                    firstDate: DateTime(1950),
+                                    lastDate: DateTime.now(),
+                                  ).then((value) {
+                                    if (value == null) return;
+
+                                    dbController.text =
+                                        "${value.day}/${value.month}/${value.year}";
+                                  });
+                                },
                               ),
-                              DefaultTextFiled(
-                                labelText: "Phone Number",
-                                controller: phoneController,
-                              ),
+                              GenderChoice(),
                               DefaultTextFiled(
                                 labelText: "Set Password",
                                 controller: passController,
@@ -123,10 +134,13 @@ class SignUpScreen extends StatelessWidget {
                               ),
                               DefaultButton(
                                 onPressed: () {
-                                  cubit.login(
+                                  cubit.register(
                                     context,
                                     email: emailController.text,
                                     pass: passController.text,
+                                    barthday: dbController.text,
+                                    genderMale: genderMale,
+                                    name: fullNameController.text,
                                   );
                                 },
                                 text: "Register",
@@ -143,6 +157,62 @@ class SignUpScreen extends StatelessWidget {
           );
         },
       ),
+    );
+  }
+}
+
+class GenderChoice extends StatefulWidget {
+  const GenderChoice({super.key});
+
+  @override
+  State<GenderChoice> createState() => _GenderChoiceState();
+}
+
+class _GenderChoiceState extends State<GenderChoice> {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          "Gender :",
+          style: TextStyle(
+            // fontSize: 12.sp,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Row(
+          children: [
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  genderMale = true;
+                });
+              },
+              child: Text(
+                "Male",
+                style: TextStyle(
+                  color: genderMale ? Color(0xFF25AE4B) : Color(0xFF6C7278),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  genderMale = false;
+                });
+              },
+              child: Text(
+                "Female",
+                style: TextStyle(
+                  color: genderMale ? Color(0xFF6C7278) : Color(0xFF25AE4B),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

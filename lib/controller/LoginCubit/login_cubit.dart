@@ -36,4 +36,22 @@ class LoginCubit extends Cubit<LoginStates> {
     );
     emit(LoginSuccessState());
   }
+
+  void register(
+    context, {
+    required String name,
+    required String email,
+    required String barthday,
+    required bool genderMale,
+    required String pass,
+  }) {
+    {
+      Navigator.pushAndRemoveUntil(
+        // ignore: use_build_context_synchronously
+        context,
+        MaterialPageRoute(builder: (context) => HomeScreen()),
+        (route) => false,
+      );
+    }
+  }
 }

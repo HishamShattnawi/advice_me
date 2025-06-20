@@ -11,12 +11,16 @@ class DefaultTextFiled extends StatefulWidget {
     this.validator,
     required this.controller,
     this.isPassword = false,
+    this.onTap,
+    this.readOnly = false,
   });
 
   bool isPassword = false;
+  bool readOnly = false;
   bool showPassword = false;
   String labelText;
   String? Function(String?)? validator;
+  void Function()? onTap;
   TextEditingController controller = TextEditingController();
 
   @override
@@ -43,6 +47,8 @@ class _DefaultTextFiledState extends State<DefaultTextFiled> {
             validator: widget.validator,
             controller: widget.controller,
             obscureText: widget.isPassword && !widget.showPassword,
+            readOnly: widget.readOnly,
+            onTap: widget.onTap,
             obscuringCharacter: "*",
             decoration: InputDecoration(
               border: OutlineInputBorder(
