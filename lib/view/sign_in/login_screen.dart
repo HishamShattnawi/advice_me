@@ -34,12 +34,7 @@ class LoginScreen extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: responsiveHeight(context, 50),
-                      ),
-                      child: SvgPicture.asset('assets/images/Logo.svg'),
-                    ),
+                    SvgPicture.asset('assets/images/Logo.svg'),
                     Card(
                       margin: EdgeInsets.all(responsiveHeight(context, 43)),
                       child: Padding(
