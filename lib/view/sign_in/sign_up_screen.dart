@@ -2,8 +2,8 @@ import 'package:advice_me/Util/constants_values.dart';
 import 'package:advice_me/Util/responsive.dart';
 import 'package:advice_me/Util/widgets/default_button.dart';
 import 'package:advice_me/Util/widgets/default_text_filed.dart';
-import 'package:advice_me/controller/LoginCubit/login_cubit.dart';
-import 'package:advice_me/controller/LoginCubit/login_states.dart';
+import 'package:advice_me/controller/LoginCubit/main_cubit.dart';
+import 'package:advice_me/controller/LoginCubit/main_states.dart';
 import 'package:advice_me/view/sign_in/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,11 +22,11 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider.value(
-      value: LoginCubit.getInstans(),
-      child: BlocConsumer<LoginCubit, LoginStates>(
+      value: MainCubit.getInstans(),
+      child: BlocConsumer<MainCubit, MainStates>(
         listener: (context, state) {},
         builder: (context, state) {
-          var cubit = LoginCubit.getInstans();
+          var cubit = MainCubit.getInstans();
           return Scaffold(
             resizeToAvoidBottomInset: false,
             backgroundColor: ConstValues.MainColor,

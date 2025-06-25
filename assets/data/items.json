@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "image": "https://i5.walmartimages.com/seo/HP-15-6-Ryzen-5-8GB-256GB-Laptop-Rose-Gold_36809cf3-480b-47a5-94f0-e1d5e70c58c0_3.fcc0d6494b0e279a13c32c80c28abfa3.jpeg",
+    "name": "Item 1",
+    "rate": 3.5,
+    "rateCount": 2,
+    "price": 10,
+    "category": 1,
+    "barcode": "",
+    "description": "",
+    "advantages": ["advantage 1", "advantage 2"],
+    "disadvantages": ["disadvantage 1", "disadvantage 2"],
+    "comments": [
+      {
+        "user": "hhh@hh.com",
+        "comment": "Comment 1",
+        "rate": 5,
+        "price": 10
+      },
+      {
+        "user": "moh@hh.com",
+        "comment": "Comment 2",
+        "rate": 4,
+        "price": 10
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "",
+    "name": "Item 2",
+    "rate": 4.5,
+    "rateCount": 2,
+    "price": 10,
+    "category": 3,
+    "barcode": "",
+    "description": "",
+    "advantages": ["advantage 1", "advantage 2"],
+    "disadvantages": ["disadvantage 1", "disadvantage 2"],
+    "comments": [
+      {
+        "user": "aaa@hh.com",
+        "comment": "Comment 1",
+        "rate": 5,
+        "price": 10
+      },
+      {
+        "user": "moh@hh.com",
+        "comment": "Comment 2",
+        "rate": 4,
+        "price": 10
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "image": "https://smartbuy-me.com/cdn/shop/files/HON0701ST0045.jpg",
+    "name": "Item 2",
+    "rate": 2,
+    "rateCount": 2,
+    "price": 10,
+    "category": 3,
+    "barcode": "",
+    "description": "",
+    "advantages": ["advantage 1", "advantage 2"],
+    "disadvantages": ["disadvantage 1", "disadvantage 2"],
+    "comments": [
+      {
+        "user": "aaa@hh.com",
+        "comment": "Comment 1",
+        "rate": 5,
+        "price": 10
+      },
+      {
+        "user": "moh@hh.com",
+        "comment": "Comment 2",
+        "rate": 4,
+        "price": 10
+      }
+    ]
+  }
+]

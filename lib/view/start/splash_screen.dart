@@ -31,10 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: ConstValues.MainColor,
       body: Stack(
         children: [
-          SvgPicture.asset(
-            'assets/images/start_background.svg',
-            fit: BoxFit.fill,
-          ),
+          SvgPicture.asset('assets/images/start_background.svg'),
           Center(
             child: SvgPicture.asset('assets/images/Logo.svg', width: 300.w),
           ),

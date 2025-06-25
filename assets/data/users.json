@@ -1,0 +1,27 @@
+[
+    {
+        "fullName": "Hisham Shattnawi",
+        "email": "hhh@hh.com",
+        "password": "123",
+        "genderMale": "01412345678",
+        "berthDate": "28/4/2002"
+    },{
+        "fullName": "Ammar Shattnawi",
+        "email": "aaa@hh.com",
+        "password": "123",
+        "genderMale": "01412345678",
+        "berthDate": "10"
+    },{
+        "fullName": "Mohammad Gharaibeh",
+        "email": "moh@hh.com",
+        "password": "123",
+        "genderMale": "01412345678",
+        "berthDate": "12313"
+    },{
+        "fullName": "Mohammad Rawashdeh",
+        "email": "mohRaw@hh.com",
+        "password": "123",
+        "genderMale": "01412345678",
+        "berthDate": "123123"
+    }
+]
