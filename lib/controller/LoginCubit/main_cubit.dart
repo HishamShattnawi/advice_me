@@ -4,6 +4,7 @@ import 'package:advice_me/Model/item_model.dart';
 import 'package:advice_me/Util/constants_values.dart';
 import 'package:advice_me/controller/LoginCubit/main_states.dart';
 import 'package:advice_me/view/home/main_screen.dart';
+import 'package:advice_me/view/item_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -81,5 +82,14 @@ class MainCubit extends Cubit<MainStates> {
       }
       emit(GatAllItemsSuccessState());
     });
+  }
+
+  ItemModel? detailsItemModel;
+  void goToItemDetails(BuildContext context, ItemModel itemModel) {
+    detailsItemModel = itemModel;
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => ItemScreen()),
+    );
   }
 }
