@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:advice_me/Model/item_model.dart';
+import 'package:advice_me/Model/user.dart';
 import 'package:advice_me/Util/constants_values.dart';
 import 'package:advice_me/controller/LoginCubit/main_states.dart';
 import 'package:advice_me/view/home/main_screen.dart';
@@ -20,6 +21,14 @@ class MainCubit extends Cubit<MainStates> {
   bool checkBoxValue = false;
   Category filterCategory = Category.All;
   List<ItemModel> allItems = [];
+
+  User thisUser = User(
+    fullName: "Ahmed Ahameed",
+    email: "4Tm0e@example.com",
+    password: "",
+    berthDate: "12/12/2000",
+    genderMale: true,
+  );
   void changeCheckBoxValue() {
     checkBoxValue = !checkBoxValue;
     emit(CheckBoxValueChangeState());

@@ -20,20 +20,13 @@ class HomeScreen extends StatelessWidget {
       child: BlocConsumer<MainCubit, MainStates>(
         listener: (context, state) {},
         builder: (context, state) {
+          var cubit = MainCubit.getInstans();
           return SafeArea(
             child: Padding(
               padding: EdgeInsets.all(25.dg),
               child: Column(
                 children: [
-                  AppbarWidget(
-                    user: User(
-                      fullName: "Ahmed Ahameed",
-                      email: "4Tm0e@example.com",
-                      password: "",
-                      berthDate: "12/12/2000",
-                      genderMale: true,
-                    ),
-                  ),
+                  AppbarWidget(user: cubit.thisUser),
                   SizedBox(height: 20.h),
                   CategoryWidget(),
                   SizedBox(height: 20.h),
