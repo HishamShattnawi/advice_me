@@ -88,6 +88,7 @@ class ItemScreen extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class TabsWidget extends StatefulWidget {
   TabsWidget({super.key, required this.itemModel});
   ItemModel itemModel;

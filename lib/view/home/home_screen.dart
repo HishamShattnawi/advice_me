@@ -1,4 +1,3 @@
-import 'package:advice_me/Model/user.dart';
 import 'package:advice_me/Util/constants_values.dart';
 import 'package:advice_me/Util/widgets/appbar.dart';
 import 'package:advice_me/Util/widgets/category.dart';

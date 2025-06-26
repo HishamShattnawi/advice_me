@@ -37,6 +37,5 @@ class AppbarWidget extends StatelessWidget {
         ),
       ],
     );
-    ;
   }
 }
